@@ -4,7 +4,8 @@ try
 {
     Information("Hello cake world!");
     EnsureDirectoryExists("BuildArtifacts");
-    VsMetrics("Cake.VsMetrics/bin/Debug/Cake.VsMetrics.dll", "BuildArtifacts/metrics.xml");
+    var projects = GetFiles("Cake.VsMetrics/bin/Debug/*.dll");
+    VsMetrics(projects, "BuildArtifacts/metrics.xml");
 }
 catch(Exception ex)
 {

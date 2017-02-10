@@ -1,0 +1,283 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeMetricsReport Version="14.0">
+  <Targets>
+    <Target Name="C:\Users\Florian\Documents\Visual Studio 2015\Projects\Cake.VsMetrics\Cake.VsMetrics\bin\Debug\Cake.VsMetrics.dll">
+      <Modules>
+        <Module Name="Cake.VsMetrics.dll" AssemblyVersion="1.0.0.0" FileVersion="1.0.0.0">
+          <Metrics>
+            <Metric Name="MaintainabilityIndex" Value="84" />
+            <Metric Name="CyclomaticComplexity" Value="28" />
+            <Metric Name="ClassCoupling" Value="20" />
+            <Metric Name="DepthOfInheritance" Value="2" />
+            <Metric Name="LinesOfCode" Value="43" />
+          </Metrics>
+          <Namespaces>
+            <Namespace Name="Cake.VsMetrics">
+              <Metrics>
+                <Metric Name="MaintainabilityIndex" Value="84" />
+                <Metric Name="CyclomaticComplexity" Value="28" />
+                <Metric Name="ClassCoupling" Value="20" />
+                <Metric Name="DepthOfInheritance" Value="2" />
+                <Metric Name="LinesOfCode" Value="43" />
+              </Metrics>
+              <Types>
+                <Type Name="Contract">
+                  <Metrics>
+                    <Metric Name="MaintainabilityIndex" Value="86" />
+                    <Metric Name="CyclomaticComplexity" Value="3" />
+                    <Metric Name="ClassCoupling" Value="1" />
+                    <Metric Name="DepthOfInheritance" Value="1" />
+                    <Metric Name="LinesOfCode" Value="5" />
+                  </Metrics>
+                  <Members>
+                    <Member Name="RequireNonNull&lt;T&gt;(T, string) : T" File="C:\Users\Florian\documents\visual studio 2015\Projects\Cake.VsMetrics\Cake.VsMetrics\Contract.cs" Line="8">
+                      <Metrics>
+                        <Metric Name="MaintainabilityIndex" Value="78" />
+                        <Metric Name="CyclomaticComplexity" Value="2" />
+                        <Metric Name="ClassCoupling" Value="1" />
+                        <Metric Name="LinesOfCode" Value="4" />
+                      </Metrics>
+                    </Member>
+                    <Member Name="Contract()">
+                      <Metrics>
+                        <Metric Name="MaintainabilityIndex" Value="100" />
+                        <Metric Name="CyclomaticComplexity" Value="1" />
+                        <Metric Name="ClassCoupling" Value="0" />
+                        <Metric Name="LinesOfCode" Value="1" />
+                      </Metrics>
+                    </Member>
+                  </Members>
+                </Type>
+                <Type Name="VsMetricsAliases">
+                  <Metrics>
+                    <Metric Name="MaintainabilityIndex" Value="80" />
+                    <Metric Name="CyclomaticComplexity" Value="2" />
+                    <Metric Name="ClassCoupling" Value="8" />
+                    <Metric Name="DepthOfInheritance" Value="1" />
+                    <Metric Name="LinesOfCode" Value="4" />
+                  </Metrics>
+                  <Members>
+                    <Member Name="VsMetrics(this ICakeContext, FilePath, FilePath) : void" File="C:\Users\Florian\documents\visual studio 2015\Projects\Cake.VsMetrics\Cake.VsMetrics\VsMetricsAliases.cs" Line="13">
+                      <Metrics>
+                        <Metric Name="MaintainabilityIndex" Value="92" />
+                        <Metric Name="CyclomaticComplexity" Value="1" />
+                        <Metric Name="ClassCoupling" Value="5" />
+                        <Metric Name="LinesOfCode" Value="1" />
+                      </Metrics>
+                    </Member>
+                    <Member Name="VsMetrics(this ICakeContext, FilePath, FilePath, VsMetricsSettings) : void" File="C:\Users\Florian\documents\visual studio 2015\Projects\Cake.VsMetrics\Cake.VsMetrics\VsMetricsAliases.cs" Line="19">
+                      <Metrics>
+                        <Metric Name="MaintainabilityIndex" Value="75" />
+                        <Metric Name="CyclomaticComplexity" Value="1" />
+                        <Metric Name="ClassCoupling" Value="7" />
+                        <Metric Name="LinesOfCode" Value="3" />
+                      </Metrics>
+                    </Member>
+                  </Members>
+                </Type>
+                <Type Name="VsMetricsRunner">
+                  <Metrics>
+                    <Metric Name="MaintainabilityIndex" Value="77" />
+                    <Metric Name="CyclomaticComplexity" Value="6" />
+                    <Metric Name="ClassCoupling" Value="12" />
+                    <Metric Name="DepthOfInheritance" Value="2" />
+                    <Metric Name="LinesOfCode" Value="15" />
+                  </Metrics>
+                  <Members>
+                    <Member Name="VsMetricsRunner(IFileSystem, ICakeEnvironment, IProcessRunner, IToolLocator)" File="C:\Users\Florian\documents\visual studio 2015\Projects\Cake.VsMetrics\Cake.VsMetrics\VsMetricsRunner.cs" Line="13">
+                      <Metrics>
+                        <Metric Name="MaintainabilityIndex" Value="84" />
+                        <Metric Name="CyclomaticComplexity" Value="1" />
+                        <Metric Name="ClassCoupling" Value="6" />
+                        <Metric Name="LinesOfCode" Value="2" />
+                      </Metrics>
+                    </Member>
+                    <Member Name="Run(FilePath, FilePath, VsMetricsSettings) : void" File="C:\Users\Florian\documents\visual studio 2015\Projects\Cake.VsMetrics\Cake.VsMetrics\VsMetricsRunner.cs" Line="19">
+                      <Metrics>
+                        <Metric Name="MaintainabilityIndex" Value="73" />
+                        <Metric Name="CyclomaticComplexity" Value="2" />
+                        <Metric Name="ClassCoupling" Value="4" />
+                        <Metric Name="LinesOfCode" Value="4" />
+                      </Metrics>
+                    </Member>
+                    <Member Name="GetToolName() : string" File="C:\Users\Florian\documents\visual studio 2015\Projects\Cake.VsMetrics\Cake.VsMetrics\VsMetricsRunner.cs" Line="28">
+                      <Metrics>
+                        <Metric Name="MaintainabilityIndex" Value="91" />
+                        <Metric Name="CyclomaticComplexity" Value="1" />
+                        <Metric Name="ClassCoupling" Value="0" />
+                        <Metric Name="LinesOfCode" Value="2" />
+                      </Metrics>
+                    </Member>
+                    <Member Name="GetToolExecutableNames() : IEnumerable&lt;string&gt;" File="C:\Users\Florian\documents\visual studio 2015\Projects\Cake.VsMetrics\Cake.VsMetrics\VsMetricsRunner.cs" Line="33">
+                      <Metrics>
+                        <Metric Name="MaintainabilityIndex" Value="87" />
+                        <Metric Name="CyclomaticComplexity" Value="1" />
+                        <Metric Name="ClassCoupling" Value="1" />
+                        <Metric Name="LinesOfCode" Value="2" />
+                      </Metrics>
+                    </Member>
+                    <Member Name="GetArguments(FilePath, FilePath, VsMetricsSettings) : ProcessArgumentBuilder" File="C:\Users\Florian\documents\visual studio 2015\Projects\Cake.VsMetrics\Cake.VsMetrics\VsMetricsRunner.cs" Line="38">
+                      <Metrics>
+                        <Metric Name="MaintainabilityIndex" Value="70" />
+                        <Metric Name="CyclomaticComplexity" Value="1" />
+                        <Metric Name="ClassCoupling" Value="6" />
+                        <Metric Name="LinesOfCode" Value="5" />
+                      </Metrics>
+                    </Member>
+                  </Members>
+                </Type>
+                <Type Name="VsMetricsSettings">
+                  <Metrics>
+                    <Metric Name="MaintainabilityIndex" Value="92" />
+                    <Metric Name="CyclomaticComplexity" Value="17" />
+                    <Metric Name="ClassCoupling" Value="4" />
+                    <Metric Name="DepthOfInheritance" Value="2" />
+                    <Metric Name="LinesOfCode" Value="19" />
+                  </Metrics>
+                  <Members>
+                    <Member Name="AssemblyDirectories.get() : IEnumerable&lt;FilePath&gt;" File="C:\Users\Florian\documents\visual studio 2015\Projects\Cake.VsMetrics\Cake.VsMetrics\VsMetricsSettings.cs" Line="9">
+                      <Metrics>
+                        <Metric Name="MaintainabilityIndex" Value="98" />
+                        <Metric Name="CyclomaticComplexity" Value="1" />
+                        <Metric Name="ClassCoupling" Value="2" />
+                        <Metric Name="LinesOfCode" Value="1" />
+                      </Metrics>
+                    </Member>
+                    <Member Name="AssemblyDirectories.set(IEnumerable&lt;FilePath&gt;) : void" File="C:\Users\Florian\documents\visual studio 2015\Projects\Cake.VsMetrics\Cake.VsMetrics\VsMetricsSettings.cs" Line="9">
+                      <Metrics>
+                        <Metric Name="MaintainabilityIndex" Value="95" />
+                        <Metric Name="CyclomaticComplexity" Value="1" />
+                        <Metric Name="ClassCoupling" Value="2" />
+                        <Metric Name="LinesOfCode" Value="1" />
+                      </Metrics>
+                    </Member>
+                    <Member Name="AssemblyPlatforms.get() : IEnumerable&lt;FilePath&gt;" File="C:\Users\Florian\documents\visual studio 2015\Projects\Cake.VsMetrics\Cake.VsMetrics\VsMetricsSettings.cs" Line="11">
+                      <Metrics>
+                        <Metric Name="MaintainabilityIndex" Value="98" />
+                        <Metric Name="CyclomaticComplexity" Value="1" />
+                        <Metric Name="ClassCoupling" Value="2" />
+                        <Metric Name="LinesOfCode" Value="1" />
+                      </Metrics>
+                    </Member>
+                    <Member Name="AssemblyPlatforms.set(IEnumerable&lt;FilePath&gt;) : void" File="C:\Users\Florian\documents\visual studio 2015\Projects\Cake.VsMetrics\Cake.VsMetrics\VsMetricsSettings.cs" Line="11">
+                      <Metrics>
+                        <Metric Name="MaintainabilityIndex" Value="95" />
+                        <Metric Name="CyclomaticComplexity" Value="1" />
+                        <Metric Name="ClassCoupling" Value="2" />
+                        <Metric Name="LinesOfCode" Value="1" />
+                      </Metrics>
+                    </Member>
+                    <Member Name="AssemblyReferences.get() : IEnumerable&lt;FilePath&gt;" File="C:\Users\Florian\documents\visual studio 2015\Projects\Cake.VsMetrics\Cake.VsMetrics\VsMetricsSettings.cs" Line="13">
+                      <Metrics>
+                        <Metric Name="MaintainabilityIndex" Value="98" />
+                        <Metric Name="CyclomaticComplexity" Value="1" />
+                        <Metric Name="ClassCoupling" Value="2" />
+                        <Metric Name="LinesOfCode" Value="1" />
+                      </Metrics>
+                    </Member>
+                    <Member Name="AssemblyReferences.set(IEnumerable&lt;FilePath&gt;) : void" File="C:\Users\Florian\documents\visual studio 2015\Projects\Cake.VsMetrics\Cake.VsMetrics\VsMetricsSettings.cs" Line="13">
+                      <Metrics>
+                        <Metric Name="MaintainabilityIndex" Value="95" />
+                        <Metric Name="CyclomaticComplexity" Value="1" />
+                        <Metric Name="ClassCoupling" Value="2" />
+                        <Metric Name="LinesOfCode" Value="1" />
+                      </Metrics>
+                    </Member>
+                    <Member Name="SearchGac.get() : bool" File="C:\Users\Florian\documents\visual studio 2015\Projects\Cake.VsMetrics\Cake.VsMetrics\VsMetricsSettings.cs" Line="15">
+                      <Metrics>
+                        <Metric Name="MaintainabilityIndex" Value="98" />
+                        <Metric Name="CyclomaticComplexity" Value="1" />
+                        <Metric Name="ClassCoupling" Value="0" />
+                        <Metric Name="LinesOfCode" Value="1" />
+                      </Metrics>
+                    </Member>
+                    <Member Name="SearchGac.set(bool) : void" File="C:\Users\Florian\documents\visual studio 2015\Projects\Cake.VsMetrics\Cake.VsMetrics\VsMetricsSettings.cs" Line="15">
+                      <Metrics>
+                        <Metric Name="MaintainabilityIndex" Value="95" />
+                        <Metric Name="CyclomaticComplexity" Value="1" />
+                        <Metric Name="ClassCoupling" Value="0" />
+                        <Metric Name="LinesOfCode" Value="1" />
+                      </Metrics>
+                    </Member>
+                    <Member Name="IgnoreInvalidTargets.get() : bool" File="C:\Users\Florian\documents\visual studio 2015\Projects\Cake.VsMetrics\Cake.VsMetrics\VsMetricsSettings.cs" Line="17">
+                      <Metrics>
+                        <Metric Name="MaintainabilityIndex" Value="98" />
+                        <Metric Name="CyclomaticComplexity" Value="1" />
+                        <Metric Name="ClassCoupling" Value="0" />
+                        <Metric Name="LinesOfCode" Value="1" />
+                      </Metrics>
+                    </Member>
+                    <Member Name="IgnoreInvalidTargets.set(bool) : void" File="C:\Users\Florian\documents\visual studio 2015\Projects\Cake.VsMetrics\Cake.VsMetrics\VsMetricsSettings.cs" Line="17">
+                      <Metrics>
+                        <Metric Name="MaintainabilityIndex" Value="95" />
+                        <Metric Name="CyclomaticComplexity" Value="1" />
+                        <Metric Name="ClassCoupling" Value="0" />
+                        <Metric Name="LinesOfCode" Value="1" />
+                      </Metrics>
+                    </Member>
+                    <Member Name="IgnoreGeneratedCode.get() : bool" File="C:\Users\Florian\documents\visual studio 2015\Projects\Cake.VsMetrics\Cake.VsMetrics\VsMetricsSettings.cs" Line="19">
+                      <Metrics>
+                        <Metric Name="MaintainabilityIndex" Value="98" />
+                        <Metric Name="CyclomaticComplexity" Value="1" />
+                        <Metric Name="ClassCoupling" Value="0" />
+                        <Metric Name="LinesOfCode" Value="1" />
+                      </Metrics>
+                    </Member>
+                    <Member Name="IgnoreGeneratedCode.set(bool) : void" File="C:\Users\Florian\documents\visual studio 2015\Projects\Cake.VsMetrics\Cake.VsMetrics\VsMetricsSettings.cs" Line="19">
+                      <Metrics>
+                        <Metric Name="MaintainabilityIndex" Value="95" />
+                        <Metric Name="CyclomaticComplexity" Value="1" />
+                        <Metric Name="ClassCoupling" Value="0" />
+                        <Metric Name="LinesOfCode" Value="1" />
+                      </Metrics>
+                    </Member>
+                    <Member Name="SuccessFile.get() : bool" File="C:\Users\Florian\documents\visual studio 2015\Projects\Cake.VsMetrics\Cake.VsMetrics\VsMetricsSettings.cs" Line="21">
+                      <Metrics>
+                        <Metric Name="MaintainabilityIndex" Value="98" />
+                        <Metric Name="CyclomaticComplexity" Value="1" />
+                        <Metric Name="ClassCoupling" Value="0" />
+                        <Metric Name="LinesOfCode" Value="1" />
+                      </Metrics>
+                    </Member>
+                    <Member Name="SuccessFile.set(bool) : void" File="C:\Users\Florian\documents\visual studio 2015\Projects\Cake.VsMetrics\Cake.VsMetrics\VsMetricsSettings.cs" Line="21">
+                      <Metrics>
+                        <Metric Name="MaintainabilityIndex" Value="95" />
+                        <Metric Name="CyclomaticComplexity" Value="1" />
+                        <Metric Name="ClassCoupling" Value="0" />
+                        <Metric Name="LinesOfCode" Value="1" />
+                      </Metrics>
+                    </Member>
+                    <Member Name="Quiet.get() : bool" File="C:\Users\Florian\documents\visual studio 2015\Projects\Cake.VsMetrics\Cake.VsMetrics\VsMetricsSettings.cs" Line="23">
+                      <Metrics>
+                        <Metric Name="MaintainabilityIndex" Value="98" />
+                        <Metric Name="CyclomaticComplexity" Value="1" />
+                        <Metric Name="ClassCoupling" Value="0" />
+                        <Metric Name="LinesOfCode" Value="1" />
+                      </Metrics>
+                    </Member>
+                    <Member Name="Quiet.set(bool) : void" File="C:\Users\Florian\documents\visual studio 2015\Projects\Cake.VsMetrics\Cake.VsMetrics\VsMetricsSettings.cs" Line="23">
+                      <Metrics>
+                        <Metric Name="MaintainabilityIndex" Value="95" />
+                        <Metric Name="CyclomaticComplexity" Value="1" />
+                        <Metric Name="ClassCoupling" Value="0" />
+                        <Metric Name="LinesOfCode" Value="1" />
+                      </Metrics>
+                    </Member>
+                    <Member Name="VsMetricsSettings()" File="C:\Users\Florian\documents\visual studio 2015\Projects\Cake.VsMetrics\Cake.VsMetrics\VsMetricsSettings.cs" Line="9">
+                      <Metrics>
+                        <Metric Name="MaintainabilityIndex" Value="80" />
+                        <Metric Name="CyclomaticComplexity" Value="1" />
+                        <Metric Name="ClassCoupling" Value="3" />
+                        <Metric Name="LinesOfCode" Value="3" />
+                      </Metrics>
+                    </Member>
+                  </Members>
+                </Type>
+              </Types>
+            </Namespace>
+          </Namespaces>
+        </Module>
+      </Modules>
+    </Target>
+  </Targets>
+</CodeMetricsReport>

@@ -15,13 +15,13 @@ namespace Cake.VsMetrics
             _environment = environment;
         }
 
-        public void Run(FilePath inputFilePath, FilePath outputFilePath, VsMetricsSettings settings)
+        public void Run(IEnumerable<FilePath> inputFilePaths, FilePath outputFilePath, VsMetricsSettings settings)
         {
-            Contract.RequireNonNull(inputFilePath, nameof(inputFilePath));
+            Contract.RequireNonNull(inputFilePaths, nameof(inputFilePaths));
             Contract.RequireNonNull(outputFilePath, nameof(outputFilePath));
             settings = settings ?? new VsMetricsSettings();
 
-            Run(settings, GetArguments(inputFilePath, outputFilePath, settings));
+            Run(settings, GetArguments(inputFilePaths, outputFilePath, settings));
         }
 
         protected override string GetToolName()
@@ -34,11 +34,15 @@ namespace Cake.VsMetrics
             return new[] { "metrics.exe" };
         }
 
-        private ProcessArgumentBuilder GetArguments(FilePath inputFilePath, FilePath outputFilePath, VsMetricsSettings settings)
+        private ProcessArgumentBuilder GetArguments(IEnumerable<FilePath> inputFilePaths, FilePath outputFilePath, VsMetricsSettings settings)
         {
             var builder = new ProcessArgumentBuilder();
 
-            builder.Append($"/f:\"{inputFilePath.MakeAbsolute(_environment).FullPath}\"");
+            foreach (var inputFilePath in inputFilePaths)
+            {
+                builder.Append($"/f:\"{inputFilePath.MakeAbsolute(_environment).FullPath}\"");
+            }
+
             builder.Append($"/o:\"{outputFilePath.MakeAbsolute(_environment).FullPath}\"");
 
             return builder;
