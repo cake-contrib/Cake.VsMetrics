@@ -2,7 +2,7 @@
 
 namespace Cake.VsMetrics
 {
-    public class Contract
+    public static class Contract
     {
         public static T RequireNonNull<T>(T t, string name)
         {

@@ -16,14 +16,13 @@ namespace Cake.VsMetrics
         }
 
         // TODO fw
-        // - Add VsMetrics.Tests
-        // - Add StyleCopAnalyzer and Ruleset for all projects
         // - Test all parameters to metrics.exe
         // - Create a better sample .cake script
         // - Add a build pipeline with NuGet etc.
         // - Should I move the project into a Source folder?
         // - Clean up code
         // - Add documentation
+        // - Can I make it easier to resolve the metrics path?
         public void Run(IEnumerable<FilePath> inputFilePaths, FilePath outputFilePath, VsMetricsSettings settings)
         {
             Contract.RequireNonNull(inputFilePaths, nameof(inputFilePaths));
