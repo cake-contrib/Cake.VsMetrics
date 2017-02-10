@@ -15,6 +15,15 @@ namespace Cake.VsMetrics
             _environment = environment;
         }
 
+        // TODO fw
+        // - Add VsMetrics.Tests
+        // - Add StyleCopAnalyzer and Ruleset for all projects
+        // - Test all parameters to metrics.exe
+        // - Create a better sample .cake script
+        // - Add a build pipeline with NuGet etc.
+        // - Should I move the project into a Source folder?
+        // - Clean up code
+        // - Add documentation
         public void Run(IEnumerable<FilePath> inputFilePaths, FilePath outputFilePath, VsMetricsSettings settings)
         {
             Contract.RequireNonNull(inputFilePaths, nameof(inputFilePaths));
@@ -38,14 +47,52 @@ namespace Cake.VsMetrics
         {
             var builder = new ProcessArgumentBuilder();
 
-            foreach (var inputFilePath in inputFilePaths)
-            {
-                builder.Append($"/f:\"{inputFilePath.MakeAbsolute(_environment).FullPath}\"");
-            }
-
-            builder.Append($"/o:\"{outputFilePath.MakeAbsolute(_environment).FullPath}\"");
+            Append(builder, "/f:", inputFilePaths);
+            Append(builder, "/o:", outputFilePath);
+            Append(builder, "/dir:", settings.AssemblyDirectories);
+            Append(builder, "/gac:", settings.SearchGac);
+            Append(builder, "/plat:", settings.AssemblyPlatforms);
+            Append(builder, "/ref:", settings.AssemblyReferences);
+            Append(builder, "/iit:", settings.IgnoreInvalidTargets);
+            Append(builder, "/igc:", settings.IgnoreGeneratedCode);
+            Append(builder, "/sf:", settings.SuccessFile);
+            Append(builder, "/q:", settings.Quiet);
 
             return builder;
+        }
+
+        private void Append(ProcessArgumentBuilder builder, string arg, IEnumerable<DirectoryPath> directoryPaths)
+        {
+            foreach (var directoryPath in directoryPaths)
+            {
+                Append(builder, arg, directoryPath);
+            }
+        }
+
+        private void Append(ProcessArgumentBuilder builder, string arg, DirectoryPath directoryPath)
+        {
+            builder.Append($"{arg}\"{directoryPath.MakeAbsolute(_environment).FullPath}\"");
+        }
+
+        private void Append(ProcessArgumentBuilder builder, string arg, IEnumerable<FilePath> filePaths)
+        {
+            foreach (var filePath in filePaths)
+            {
+                Append(builder, arg, filePath);
+            }
+        }
+
+        private void Append(ProcessArgumentBuilder builder, string arg, FilePath filePath)
+        {
+            builder.Append($"{arg}\"{filePath.MakeAbsolute(_environment).FullPath}\"");
+        }
+
+        private void Append(ProcessArgumentBuilder builder, string arg, bool expression)
+        {
+            if (expression)
+            {
+                builder.Append(arg);
+            }
         }
     }
 }
