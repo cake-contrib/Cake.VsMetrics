@@ -1,0 +1,8 @@
+*.suo
+*.user
+**/bin
+**/obj
+TestResults/
+packages/
+tools/*
+!tools/packages.config
