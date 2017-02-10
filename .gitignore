@@ -6,3 +6,4 @@ TestResults/
 packages/
 tools/*
 !tools/packages.config
+BuildArtifacts/

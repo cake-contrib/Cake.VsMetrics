@@ -7,14 +7,21 @@ namespace Cake.VsMetrics
 {
     public sealed class VsMetricsRunner : Tool<VsMetricsSettings>
     {
+        private ICakeEnvironment _environment;
+
         public VsMetricsRunner(IFileSystem fileSystem, ICakeEnvironment environment, IProcessRunner processRunner, IToolLocator tools)
             : base(fileSystem, environment, processRunner, tools)
         {
+            _environment = environment;
         }
 
-        public void Run()
+        public void Run(FilePath inputFilePath, FilePath outputFilePath, VsMetricsSettings settings)
         {
-            Run(new VsMetricsSettings(), new ProcessArgumentBuilder());
+            Contract.RequireNonNull(inputFilePath, nameof(inputFilePath));
+            Contract.RequireNonNull(outputFilePath, nameof(outputFilePath));
+            settings = settings ?? new VsMetricsSettings();
+
+            Run(settings, GetArguments(inputFilePath, outputFilePath, settings));
         }
 
         protected override string GetToolName()
@@ -25,6 +32,16 @@ namespace Cake.VsMetrics
         protected override IEnumerable<string> GetToolExecutableNames()
         {
             return new[] { "metrics.exe" };
+        }
+
+        private ProcessArgumentBuilder GetArguments(FilePath inputFilePath, FilePath outputFilePath, VsMetricsSettings settings)
+        {
+            var builder = new ProcessArgumentBuilder();
+
+            builder.Append($"/f:\"{inputFilePath.MakeAbsolute(_environment).FullPath}\"");
+            builder.Append($"/o:\"{outputFilePath.MakeAbsolute(_environment).FullPath}\"");
+
+            return builder;
         }
     }
 }

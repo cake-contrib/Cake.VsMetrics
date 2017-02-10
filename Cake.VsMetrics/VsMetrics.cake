@@ -3,7 +3,8 @@
 try
 {
     Information("Hello cake world!");
-    VsMetrics();
+    EnsureDirectoryExists("BuildArtifacts");
+    VsMetrics("Cake.VsMetrics/bin/Debug/Cake.VsMetrics.dll", "BuildArtifacts/metrics.xml");
 }
 catch(Exception ex)
 {
