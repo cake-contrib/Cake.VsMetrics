@@ -32,7 +32,7 @@ namespace Cake.VsMetrics
         /// <param name="outputFilePath">The output file path.</param>
         /// <example>
         /// <code>
-        /// var projects = GetFiles("./bin/Debug/*.dll");
+        /// var projects = GetFiles("bin/Debug/*.dll");
         /// VsMetrics(projects, "metrics_result.xml");
         /// </code>
         /// </example>
@@ -51,11 +51,11 @@ namespace Cake.VsMetrics
         /// <param name="settings">The settings.</param>
         /// <example>
         /// <code>
-        /// var projects = GetFiles("./bin/Debug/*.dll");
+        /// var projects = GetFiles("bin/Debug/*.dll");
         /// var settings = new VsMetricsSettings()
         /// {
         ///     SuccessFile = true,
-        ///     IgnoreGeneratedCode = true,
+        ///     IgnoreGeneratedCode = true
         /// };
         ///
         /// VsMetrics(projects, "metrics_result.xml", settings);

@@ -29,7 +29,6 @@ namespace Cake.VsMetrics
         // TODO fw
         // - Tests
         // - Cake nuget automation
-        // - Can I make it easier to resolve the metrics path?
 
         /// <summary>
         /// Calculates code metrics for a collection of input files and saves the report in an output file.
