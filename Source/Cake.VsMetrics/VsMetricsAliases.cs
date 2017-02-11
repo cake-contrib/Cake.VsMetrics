@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Cake.Core;
 using Cake.Core.Annotations;
 using Cake.Core.IO;
@@ -63,7 +64,10 @@ namespace Cake.VsMetrics
         [CakeMethodAlias]
         public static void VsMetrics(this ICakeContext context, IEnumerable<FilePath> inputFilePaths, FilePath outputFilePath, VsMetricsSettings settings)
         {
-            Check.RequireNonNull(context, nameof(context));
+            if (context == null)
+            {
+                throw new ArgumentException("Context cannot be null", nameof(context));
+            }
 
             var runner = new VsMetricsRunner(context.FileSystem, context.Environment, context.ProcessRunner, context.Tools);
             runner.Run(inputFilePaths, outputFilePath, settings);

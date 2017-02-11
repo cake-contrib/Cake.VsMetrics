@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Cake.Core;
 using Cake.Core.IO;
 using Cake.Core.Tooling;
@@ -38,8 +39,16 @@ namespace Cake.VsMetrics
         /// <param name="settings">The settings.</param>
         public void Run(IEnumerable<FilePath> inputFilePaths, FilePath outputFilePath, VsMetricsSettings settings)
         {
-            Check.RequireNonNull(inputFilePaths, nameof(inputFilePaths));
-            Check.RequireNonNull(outputFilePath, nameof(outputFilePath));
+            if (inputFilePaths == null)
+            {
+                throw new ArgumentException("InputFilePaths cannot be null", nameof(inputFilePaths));
+            }
+
+            if (outputFilePath == null)
+            {
+                throw new ArgumentException("OutputFilePath cannot be null", nameof(outputFilePath));
+            }
+
             settings = settings ?? new VsMetricsSettings();
 
             Run(settings, GetArguments(inputFilePaths, outputFilePath, settings));
