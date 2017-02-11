@@ -5,10 +5,20 @@ using Cake.Core.Tooling;
 
 namespace Cake.VsMetrics
 {
+    /// <summary>
+    /// The VsMetrics runner.
+    /// </summary>
     public sealed class VsMetricsRunner : Tool<VsMetricsSettings>
     {
         private readonly ICakeEnvironment _environment;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="VsMetricsRunner" /> class.
+        /// </summary>
+        /// <param name="fileSystem">The file system.</param>
+        /// <param name="environment">The environment.</param>
+        /// <param name="processRunner">The process runner.</param>
+        /// <param name="tools">The tool locator</param>
         public VsMetricsRunner(IFileSystem fileSystem, ICakeEnvironment environment, IProcessRunner processRunner, IToolLocator tools)
             : base(fileSystem, environment, processRunner, tools)
         {
@@ -16,8 +26,16 @@ namespace Cake.VsMetrics
         }
 
         // TODO fw
-        // - Add documentation
+        // - Tests
+        // - Cake nuget automation
         // - Can I make it easier to resolve the metrics path?
+
+        /// <summary>
+        /// Calculates code metrics for a collection of input files and saves the report in an output file.
+        /// </summary>
+        /// <param name="inputFilePaths">The input filepaths.</param>
+        /// <param name="outputFilePath">The output file path.</param>
+        /// <param name="settings">The settings.</param>
         public void Run(IEnumerable<FilePath> inputFilePaths, FilePath outputFilePath, VsMetricsSettings settings)
         {
             Check.RequireNonNull(inputFilePaths, nameof(inputFilePaths));
@@ -27,11 +45,19 @@ namespace Cake.VsMetrics
             Run(settings, GetArguments(inputFilePaths, outputFilePath, settings));
         }
 
+        /// <summary>
+        /// Gets the name of the tool.
+        /// </summary>
+        /// <returns>The name of the tool.</returns>
         protected override string GetToolName()
         {
             return "Metrics";
         }
 
+        /// <summary>
+        /// Gets the name of the tool executable.
+        /// </summary>
+        /// <returns>The tool executable name.</returns>
         protected override IEnumerable<string> GetToolExecutableNames()
         {
             return new[] { "metrics.exe" };
