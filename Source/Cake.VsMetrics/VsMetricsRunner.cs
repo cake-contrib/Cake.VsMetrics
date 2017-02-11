@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Cake.Core;
 using Cake.Core.IO;
 using Cake.Core.Tooling;
@@ -19,7 +18,6 @@ namespace Cake.VsMetrics
         // TODO fw
         // - Create a better sample .cake script
         // - Add a build pipeline with NuGet etc.
-        // - Should I move the project into a Source folder?
         // - Add documentation
         // - Can I make it easier to resolve the metrics path?
         public void Run(IEnumerable<FilePath> inputFilePaths, FilePath outputFilePath, VsMetricsSettings settings)

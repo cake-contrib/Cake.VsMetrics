@@ -1,15 +1,13 @@
-Setup(context => {
-    context.Tools.RegisterFile("C:/Program Files (x86)/Microsoft Visual Studio 14.0/Team Tools/Static Analysis Tools/FxCop/metrics.exe");
-});
+#load pipeline.cake
 
 var target = Argument("target", "Default");
 
+PipelineSettings.Solution = "Cake.VsMetrics.sln";
+
 Task("Default")
+    .IsDependentOn("BuildPipeline")
     .Does(() =>
 {
-    MSBuild("./Source/Cake.VsMetrics.sln");
 });
 
 RunTarget(target);
-
-#load "./Source/Cake.VsMetrics/bin/Debug/VsMetrics.cake"
