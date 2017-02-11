@@ -25,8 +25,8 @@ namespace Cake.VsMetrics
         // - Can I make it easier to resolve the metrics path?
         public void Run(IEnumerable<FilePath> inputFilePaths, FilePath outputFilePath, VsMetricsSettings settings)
         {
-            Contract.RequireNonNull(inputFilePaths, nameof(inputFilePaths));
-            Contract.RequireNonNull(outputFilePath, nameof(outputFilePath));
+            Check.RequireNonNull(inputFilePaths, nameof(inputFilePaths));
+            Check.RequireNonNull(outputFilePath, nameof(outputFilePath));
             settings = settings ?? new VsMetricsSettings();
 
             Run(settings, GetArguments(inputFilePaths, outputFilePath, settings));

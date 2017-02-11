@@ -17,7 +17,7 @@ namespace Cake.VsMetrics
         [CakeMethodAlias]
         public static void VsMetrics(this ICakeContext context, IEnumerable<FilePath> inputFilePaths, FilePath outputFilePath, VsMetricsSettings settings)
         {
-            Contract.RequireNonNull(context, nameof(context));
+            Check.RequireNonNull(context, nameof(context));
 
             var runner = new VsMetricsRunner(context.FileSystem, context.Environment, context.ProcessRunner, context.Tools);
             runner.Run(inputFilePaths, outputFilePath, settings);
