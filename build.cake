@@ -10,4 +10,10 @@ Task("Default")
 {
 });
 
+Task("CreateNuGet").Does(() =>
+{
+	EnsureDirectoryExists("BuildArtifacts/NuGet");
+	NuGetPack("Source/Cake.VsMetrics/Cake.VsMetrics.nuspec", new NuGetPackSettings() { BasePath = "Source/Cake.VsMetrics/bin/" + PipelineSettings.Configuration, OutputDirectory = "BuildArtifacts/NuGet" });
+});
+
 RunTarget(target);
