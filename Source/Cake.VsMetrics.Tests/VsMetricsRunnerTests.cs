@@ -28,6 +28,16 @@ namespace Cake.VsMetrics.Tests
         }
 
         [TestMethod]
+        public void RunFixtureWithNoSettings()
+        {
+            var fixture = new VsMetricsRunnerFixture() { Settings = null };
+
+            fixture.Run();
+
+            // We expect this to not throw any exception
+        }
+
+        [TestMethod]
         [ExpectedException(typeof(CakeException))]
         public void RunFixtureWithProcessReturningError()
         {
