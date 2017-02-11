@@ -7,9 +7,9 @@ var target = Argument("target", "Default");
 Task("Default")
     .Does(() =>
 {
-    MSBuild("Cake.VsMetrics.sln");
+    MSBuild("./Source/Cake.VsMetrics.sln");
 });
 
 RunTarget(target);
 
-#load "Cake.VsMetrics\bin\Debug\VsMetrics.cake"
+#load "./Source/Cake.VsMetrics/bin/Debug/VsMetrics.cake"
