@@ -16,8 +16,6 @@ namespace Cake.VsMetrics
         }
 
         // TODO fw
-        // - Create a better sample .cake script
-        // - Add a build pipeline with NuGet etc.
         // - Add documentation
         // - Can I make it easier to resolve the metrics path?
         public void Run(IEnumerable<FilePath> inputFilePaths, FilePath outputFilePath, VsMetricsSettings settings)

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Cake.VsMetrics</id>
+    <version>0.1.0</version>
+    <title>Cake.VsMetrics</title>
+    <authors>Florian Winkelbauer</authors>
+    <owners>Florian Winkelbauer, cake-contrib</owners>
+    <licenseUrl>https://github.com/fwinkelbauer/Cake.VsMetrics/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/fwinkelbauer/Cake.VsMetrics</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Cake Metrics AddIn</description>
+    <summary>Cake AddIn for Visual Studio's standalone metrics.exe command line tool</summary>
+    <copyright>Copyright (c) Cake Contributions 2017 - Present</copyright>
+    <tags>Cake, Script, Build, Metrics</tags>
+  </metadata>
+</package>
