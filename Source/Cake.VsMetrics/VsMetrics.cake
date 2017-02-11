@@ -2,8 +2,7 @@
 
 try
 {
-    Information("Hello cake world!");
-    EnsureDirectoryExists("BuildArtifacts");
+    EnsureDirectoryExists("BuildArtifacts/Metrics");
     var projects = GetFiles("Source/Cake.VsMetrics/bin/Debug/*.dll");
     var settings = new VsMetricsSettings()
     {
@@ -11,7 +10,7 @@ try
         IgnoreGeneratedCode = true,
     };
 
-    VsMetrics(projects, "BuildArtifacts/metrics.xml", settings);
+    VsMetrics(projects, "BuildArtifacts/Metrics/metrics.xml", settings);
 }
 catch(Exception ex)
 {
