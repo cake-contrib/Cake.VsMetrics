@@ -7,7 +7,7 @@ namespace Cake.VsMetrics
 {
     public sealed class VsMetricsRunner : Tool<VsMetricsSettings>
     {
-        private ICakeEnvironment _environment;
+        private readonly ICakeEnvironment _environment;
 
         public VsMetricsRunner(IFileSystem fileSystem, ICakeEnvironment environment, IProcessRunner processRunner, IToolLocator tools)
             : base(fileSystem, environment, processRunner, tools)

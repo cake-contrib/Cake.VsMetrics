@@ -2,7 +2,7 @@
 
 var target = Argument("target", "Default");
 
-PipelineSettings.Solution = "Cake.VsMetrics.sln";
+PipelineSettings.Solution = "Source/Cake.VsMetrics.sln";
 
 Task("Default")
     .IsDependentOn("BuildPipeline")
