@@ -26,10 +26,6 @@ namespace Cake.VsMetrics
             _environment = environment;
         }
 
-        // TODO fw
-        // - Tests
-        // - Cake nuget automation
-
         /// <summary>
         /// Calculates code metrics for a collection of input files and saves the report in an output file.
         /// </summary>
