@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Cake.Core;
 using Cake.Core.IO;
 using Cake.Core.Tooling;
@@ -16,11 +17,9 @@ namespace Cake.VsMetrics
         }
 
         // TODO fw
-        // - Test all parameters to metrics.exe
         // - Create a better sample .cake script
         // - Add a build pipeline with NuGet etc.
         // - Should I move the project into a Source folder?
-        // - Clean up code
         // - Add documentation
         // - Can I make it easier to resolve the metrics path?
         public void Run(IEnumerable<FilePath> inputFilePaths, FilePath outputFilePath, VsMetricsSettings settings)
@@ -48,20 +47,26 @@ namespace Cake.VsMetrics
 
             Append(builder, "/f:", inputFilePaths);
             Append(builder, "/o:", outputFilePath);
-            Append(builder, "/dir:", settings.AssemblyDirectories);
-            Append(builder, "/gac:", settings.SearchGac);
+            Append(builder, "/d:", settings.AssemblyDirectories);
             Append(builder, "/plat:", settings.AssemblyPlatforms);
             Append(builder, "/ref:", settings.AssemblyReferences);
-            Append(builder, "/iit:", settings.IgnoreInvalidTargets);
-            Append(builder, "/igc:", settings.IgnoreGeneratedCode);
-            Append(builder, "/sf:", settings.SuccessFile);
-            Append(builder, "/q:", settings.Quiet);
+
+            Append(builder, "/gac", settings.SearchGac);
+            Append(builder, "/iit", settings.IgnoreInvalidTargets);
+            Append(builder, "/igc", settings.IgnoreGeneratedCode);
+            Append(builder, "/sf", settings.SuccessFile);
+            Append(builder, "/q", settings.Quiet);
 
             return builder;
         }
 
         private void Append(ProcessArgumentBuilder builder, string arg, IEnumerable<DirectoryPath> directoryPaths)
         {
+            if (directoryPaths == null)
+            {
+                return;
+            }
+
             foreach (var directoryPath in directoryPaths)
             {
                 Append(builder, arg, directoryPath);
@@ -75,6 +80,11 @@ namespace Cake.VsMetrics
 
         private void Append(ProcessArgumentBuilder builder, string arg, IEnumerable<FilePath> filePaths)
         {
+            if (filePaths == null)
+            {
+                return;
+            }
+
             foreach (var filePath in filePaths)
             {
                 Append(builder, arg, filePath);

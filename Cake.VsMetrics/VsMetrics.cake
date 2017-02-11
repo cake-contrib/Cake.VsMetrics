@@ -5,7 +5,13 @@ try
     Information("Hello cake world!");
     EnsureDirectoryExists("BuildArtifacts");
     var projects = GetFiles("Cake.VsMetrics/bin/Debug/*.dll");
-    VsMetrics(projects, "BuildArtifacts/metrics.xml");
+    var settings = new VsMetricsSettings()
+    {
+        SuccessFile = true,
+        IgnoreGeneratedCode = true,
+    };
+
+    VsMetrics(projects, "BuildArtifacts/metrics.xml", settings);
 }
 catch(Exception ex)
 {

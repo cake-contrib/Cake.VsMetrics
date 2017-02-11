@@ -6,11 +6,11 @@ namespace Cake.VsMetrics
 {
     public sealed class VsMetricsSettings : ToolSettings
     {
-        public IEnumerable<DirectoryPath> AssemblyDirectories { get; set; } = new DirectoryPath[] { };
+        public IEnumerable<DirectoryPath> AssemblyDirectories { get; set; }
 
-        public IEnumerable<DirectoryPath> AssemblyPlatforms { get; set; } = new DirectoryPath[] { };
+        public IEnumerable<DirectoryPath> AssemblyPlatforms { get; set; }
 
-        public IEnumerable<FilePath> AssemblyReferences { get; set; } = new FilePath[] { };
+        public IEnumerable<FilePath> AssemblyReferences { get; set; }
 
         public bool SearchGac { get; set; }
 
