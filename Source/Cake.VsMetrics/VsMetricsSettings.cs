@@ -25,27 +25,27 @@ namespace Cake.VsMetrics
         public IEnumerable<FilePath> AssemblyReferences { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether the GAC should be searched for assembleis
+        /// Gets or sets a value indicating whether the GAC should be searched for assemblies.
         /// </summary>
         public bool SearchGac { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether invalid targets should be analysed
+        /// Gets or sets a value indicating whether invalid targets should be analysed.
         /// </summary>
         public bool IgnoreInvalidTargets { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether generated code should be analysed
+        /// Gets or sets a value indicating whether generated code should be analysed.
         /// </summary>
         public bool IgnoreGeneratedCode { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether a success file should be created
+        /// Gets or sets a value indicating whether a success file should be created.
         /// </summary>
         public bool SuccessFile { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether metric.exe's output should be shown
+        /// Gets or sets a value indicating whether metric.exe's output should be shown.
         /// </summary>
         public bool Quiet { get; set; }
     }
