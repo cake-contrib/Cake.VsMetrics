@@ -7,3 +7,5 @@
 *.ruleset    text
 *.cake       text
 *.ps1        text
+*.yaml       text
+*.yml        text
