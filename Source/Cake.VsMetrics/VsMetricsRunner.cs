@@ -67,6 +67,38 @@ namespace Cake.VsMetrics
             return new[] { "metrics.exe" };
         }
 
+        /// <summary>
+        /// Gets the alternative tool paths to metrics.exe depending on the tool version.
+        /// </summary>
+        /// <param name="settings">The settings.</param>
+        /// <returns>The alternative tool paths to metrics.exe.</returns>
+        protected override IEnumerable<FilePath> GetAlternativeToolPaths(VsMetricsSettings settings)
+        {
+            if (_environment.Platform.IsUnix())
+            {
+                return new FilePath[] { };
+            }
+
+            var programFiles = _environment.GetSpecialPath(SpecialPath.ProgramFilesX86);
+            var metrics2013 = programFiles.Combine("Microsoft Visual Studio 12.0/Team Tools/Static Analysis Tools/FxCop").CombineWithFilePath("metrics.exe");
+            var metrics2015 = programFiles.Combine("Microsoft Visual Studio 14.0/Team Tools/Static Analysis Tools/FxCop").CombineWithFilePath("metrics.exe");
+
+            if (settings.ToolVersion == VsMetricsToolVersion.Default)
+            {
+                return new FilePath[] { metrics2015, metrics2013 };
+            }
+            else if (settings.ToolVersion == VsMetricsToolVersion.VS2013)
+            {
+                return new FilePath[] { metrics2013 };
+            }
+            else if (settings.ToolVersion == VsMetricsToolVersion.VS2015)
+            {
+                return new FilePath[] { metrics2015 };
+            }
+
+            return base.GetAlternativeToolPaths(settings);
+        }
+
         private ProcessArgumentBuilder GetArguments(IEnumerable<FilePath> inputFilePaths, FilePath outputFilePath, VsMetricsSettings settings)
         {
             var builder = new ProcessArgumentBuilder();

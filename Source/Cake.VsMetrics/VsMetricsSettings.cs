@@ -10,6 +10,14 @@ namespace Cake.VsMetrics
     public sealed class VsMetricsSettings : ToolSettings
     {
         /// <summary>
+        /// Initializes a new instance of the <see cref="VsMetricsSettings"/> class.
+        /// </summary>
+        public VsMetricsSettings()
+        {
+            ToolVersion = VsMetricsToolVersion.Default;
+        }
+
+        /// <summary>
         /// Gets or sets the Assembly directory paths.
         /// </summary>
         /// <value>A collection of directory paths to assemblies.</value>
@@ -56,5 +64,11 @@ namespace Cake.VsMetrics
         /// </summary>
         /// <value>The boolean value indicating if metric.exe's output should be shown.</value>
         public bool Quiet { get; set; }
+
+        /// <summary>
+        /// Gets or sets the tool version.
+        /// </summary>
+        /// <value>The tool version.</value>
+        public VsMetricsToolVersion ToolVersion { get; set; }
     }
 }
