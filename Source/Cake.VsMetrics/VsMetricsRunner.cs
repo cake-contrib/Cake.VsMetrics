@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Cake.Core;
 using Cake.Core.IO;
 using Cake.Core.Tooling;
@@ -76,7 +77,7 @@ namespace Cake.VsMetrics
         {
             if (_environment.Platform.IsUnix())
             {
-                return new FilePath[] { };
+                return Enumerable.Empty<FilePath>();
             }
 
             var programFiles = _environment.GetSpecialPath(SpecialPath.ProgramFilesX86);
@@ -96,7 +97,7 @@ namespace Cake.VsMetrics
                 return new FilePath[] { metrics2015 };
             }
 
-            return base.GetAlternativeToolPaths(settings);
+            return Enumerable.Empty<FilePath>();
         }
 
         private ProcessArgumentBuilder GetArguments(IEnumerable<FilePath> inputFilePaths, FilePath outputFilePath, VsMetricsSettings settings)

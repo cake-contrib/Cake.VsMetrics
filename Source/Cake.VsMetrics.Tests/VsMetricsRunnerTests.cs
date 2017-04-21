@@ -59,5 +59,51 @@ namespace Cake.VsMetrics.Tests
 
             Assert.AreEqual("/f:\"c:/tool.exe\" /o:\"/Working/metrics_result.xml\" /d:\"/Working\" /gac", result.Args);
         }
+
+        [TestMethod]
+        public void RunFixtureWithAlternativePathWindows()
+        {
+            AssertAlternativePath(VsMetricsToolVersion.Default, "/ProgramFilesX86/Microsoft Visual Studio 14.0/Team Tools/Static Analysis Tools/FxCop/metrics.exe");
+            AssertAlternativePath(VsMetricsToolVersion.VS2015, "/ProgramFilesX86/Microsoft Visual Studio 14.0/Team Tools/Static Analysis Tools/FxCop/metrics.exe");
+            AssertAlternativePath(VsMetricsToolVersion.VS2013, "/ProgramFilesX86/Microsoft Visual Studio 12.0/Team Tools/Static Analysis Tools/FxCop/metrics.exe");
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(CakeException))]
+        public void RunFixtureWithAlternativePathWindowsNotSupported()
+        {
+            var fixture = new VsMetricsRunnerFixture(false)
+            {
+                Settings = { ToolVersion = (VsMetricsToolVersion)1000 }
+            };
+
+            fixture.Environment.SetSpecialPath(SpecialPath.ProgramFilesX86, "/ProgramFilesX86");
+
+            fixture.Run();
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(CakeException))]
+        public void RunFixtureWithAlternativePathLinuxNotSupported()
+        {
+            var fixture = new VsMetricsRunnerFixture(false, PlatformFamily.Linux);
+
+            fixture.Run();
+        }
+
+        private void AssertAlternativePath(VsMetricsToolVersion version, string expectedPath)
+        {
+            var fixture = new VsMetricsRunnerFixture(false)
+            {
+                Settings = { ToolVersion = version }
+            };
+
+            fixture.FileSystem.CreateFile(expectedPath);
+            fixture.Environment.SetSpecialPath(SpecialPath.ProgramFilesX86, "/ProgramFilesX86");
+
+            var result = fixture.Run();
+
+            Assert.AreEqual(expectedPath, result.Path.FullPath);
+        }
     }
 }
