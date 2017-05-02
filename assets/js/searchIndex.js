@@ -34,14 +34,6 @@ var searchModule = function() {
 
     a({
         id:0,
-        title:"VsMetricsSettings",
-        content:"VsMetricsSettings",
-        description:'',
-        tags:''
-    });
-
-    a({
-        id:1,
         title:"VsMetricsRunner",
         content:"VsMetricsRunner",
         description:'',
@@ -49,17 +41,27 @@ var searchModule = function() {
     });
 
     a({
-        id:2,
+        id:1,
         title:"VsMetricsAliases",
         content:"VsMetricsAliases",
         description:'',
         tags:''
     });
 
-    y({
-        url:'/Cake.VsMetrics/Cake.VsMetrics/api/Cake.VsMetrics/VsMetricsSettings',
+    a({
+        id:2,
+        title:"VsMetricsToolVersion",
+        content:"VsMetricsToolVersion",
+        description:'',
+        tags:''
+    });
+
+    a({
+        id:3,
         title:"VsMetricsSettings",
-        description:""
+        content:"VsMetricsSettings",
+        description:'',
+        tags:''
     });
 
     y({
@@ -71,6 +73,18 @@ var searchModule = function() {
     y({
         url:'/Cake.VsMetrics/Cake.VsMetrics/api/Cake.VsMetrics/VsMetricsAliases',
         title:"VsMetricsAliases",
+        description:""
+    });
+
+    y({
+        url:'/Cake.VsMetrics/Cake.VsMetrics/api/Cake.VsMetrics/VsMetricsToolVersion',
+        title:"VsMetricsToolVersion",
+        description:""
+    });
+
+    y({
+        url:'/Cake.VsMetrics/Cake.VsMetrics/api/Cake.VsMetrics/VsMetricsSettings',
+        title:"VsMetricsSettings",
         description:""
     });
 

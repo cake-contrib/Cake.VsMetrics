@@ -106,16 +106,11 @@
 	<section class="content">
 		<h1 id="usage">Usage</h1>
 <p>Download and install the <a href="https://www.microsoft.com/en-us/download/details.aspx?id=48213">Metrics Powertool</a> (this link is for Visual Studio 2015).</p>
-<p>Include the Addin in your Cake build script and register <code>metrics.exe</code> depending on which version of the tool you have installed:</p>
+<p>Include the Addin in your cake build script:</p>
 <pre><code class="language-csharp">#addin "Cake.VsMetrics"
 </code></pre>
 <p>Or NuGet reference:</p>
 <pre><code class="language-csharp">#addin "nuget:https://www.nuget.org/api/v2?package=Cake.VsMetrics"
-</code></pre>
-<p>Register Visual Studio (e.g. Visual Studio 2015):</p>
-<pre><code class="language-csharp">Setup(context =&gt; {
-    context.Tools.RegisterFile("C:/Program Files (x86)/Microsoft Visual Studio 14.0/Team Tools/Static Analysis Tools/FxCop/metrics.exe");
-});
 </code></pre>
 <p>Afterwards you can start to use the Addin like this:</p>
 <pre><code class="language-csharp">var projects = GetFiles("bin/Debug/*.dll");

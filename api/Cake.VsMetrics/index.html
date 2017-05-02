@@ -71,7 +71,8 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#ClassTypes">Class Types</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#EnumTypes">Enum Types</a></p>
+<p><a href="#ClassTypes">Class Types</a></p>
 <hr class="infobar-hidden">
 </div>
 
@@ -148,6 +149,26 @@
 	
 	
 
+			<h1 id="EnumTypes">Enum Types</h1>
+			<div class="box">
+				<div class="box-body no-padding table-responsive">
+					<table class="table table-striped table-hover two-cols">
+						<thead>
+							<tr>
+								<th>Enum</th>
+									<th>Summary</th>
+							</tr>
+						</thead>
+							<tbody><tr>
+								<td><a href="/Cake.VsMetrics/api/Cake.VsMetrics/VsMetricsToolVersion">VsMetricsToolVersion</a></td>
+									<td>
+    Represents a VsMetrics tool version.
+    </td>
+							</tr>
+					</tbody></table>
+				</div>
+			</div>
+		
 			<h1 id="ClassTypes">Class Types</h1>
 			<div class="box">
 				<div class="box-body no-padding table-responsive">
@@ -163,12 +184,9 @@
 									<td>
     <p>Contains functionality related to Visual studio's metrics.exe command line tool.</p>
     <p>
-    In order to use the commands for this addin, you will need to register metrics.exe in your cake build file after you have installed the metrics power tool:
-    </p><pre><code class="cs">Setup(context =&gt; {
-    context.Tools.RegisterFile("C:/Program Files (x86)/Microsoft Visual Studio 14.0/Team Tools/Static Analysis Tools/FxCop/metrics.exe");
-});</code></pre>
-    In addition, you will need to include the following:
-    <pre><code class="cs">#addin Cake.VsMetrics</code></pre>
+    In order to use the commands for this addin, you will need to install the metrics power tool (which is currently not included in a Visual Studio installation).
+    Afterwards include the Addin in your cake build script and you are ready to go:
+    </p><pre><code class="cs">#addin Cake.VsMetrics</code></pre>
     <p></p>
     </td>
 							</tr>

@@ -128,6 +128,8 @@
 			<li class="header">Namespace</li>
 		<li><a href="/Cake.VsMetrics/api/Cake.VsMetrics">Cake<wbr>.VsMetrics</a></li>
 		<li role="separator" class="divider"></li>
+			<li class="header">Enum Types</li>
+				<li><a href="/Cake.VsMetrics/api/Cake.VsMetrics/VsMetricsToolVersion">VsMetricsToolVersion</a></li>
 			<li class="header">Class Types</li>
 				<li class="selected"><a href="/Cake.VsMetrics/api/Cake.VsMetrics/VsMetricsAliases">VsMetricsAliases</a></li>
 				<li><a href="/Cake.VsMetrics/api/Cake.VsMetrics/VsMetricsRunner">VsMetricsRunner</a></li>
@@ -154,12 +156,9 @@
 	<div class="lead">
     <p>Contains functionality related to Visual studio's metrics.exe command line tool.</p>
     <p>
-    In order to use the commands for this addin, you will need to register metrics.exe in your cake build file after you have installed the metrics power tool:
-    </p><pre><code class="cs">Setup(context =&gt; {
-    context.Tools.RegisterFile("C:/Program Files (x86)/Microsoft Visual Studio 14.0/Team Tools/Static Analysis Tools/FxCop/metrics.exe");
-});</code></pre>
-    In addition, you will need to include the following:
-    <pre><code class="cs">#addin Cake.VsMetrics</code></pre>
+    In order to use the commands for this addin, you will need to install the metrics power tool (which is currently not included in a Visual Studio installation).
+    Afterwards include the Addin in your cake build script and you are ready to go:
+    </p><pre><code class="cs">#addin Cake.VsMetrics</code></pre>
     <p></p>
     </div>
 
