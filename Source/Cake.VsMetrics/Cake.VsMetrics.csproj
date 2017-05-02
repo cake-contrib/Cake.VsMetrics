@@ -50,6 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="VsMetricsToolVersion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="VsMetricsAliases.cs" />
     <Compile Include="VsMetricsRunner.cs" />
