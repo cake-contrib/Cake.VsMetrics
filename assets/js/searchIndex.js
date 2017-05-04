@@ -34,16 +34,16 @@ var searchModule = function() {
 
     a({
         id:0,
-        title:"VsMetricsRunner",
-        content:"VsMetricsRunner",
+        title:"VsMetricsAliases",
+        content:"VsMetricsAliases",
         description:'',
         tags:''
     });
 
     a({
         id:1,
-        title:"VsMetricsAliases",
-        content:"VsMetricsAliases",
+        title:"VsMetricsRunner",
+        content:"VsMetricsRunner",
         description:'',
         tags:''
     });
@@ -65,14 +65,14 @@ var searchModule = function() {
     });
 
     y({
-        url:'/Cake.VsMetrics/Cake.VsMetrics/api/Cake.VsMetrics/VsMetricsRunner',
-        title:"VsMetricsRunner",
+        url:'/Cake.VsMetrics/Cake.VsMetrics/api/Cake.VsMetrics/VsMetricsAliases',
+        title:"VsMetricsAliases",
         description:""
     });
 
     y({
-        url:'/Cake.VsMetrics/Cake.VsMetrics/api/Cake.VsMetrics/VsMetricsAliases',
-        title:"VsMetricsAliases",
+        url:'/Cake.VsMetrics/Cake.VsMetrics/api/Cake.VsMetrics/VsMetricsRunner',
+        title:"VsMetricsRunner",
         description:""
     });
 
