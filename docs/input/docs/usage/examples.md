@@ -1,8 +1,4 @@
-# Cake.VsMetrics
-
-Cake.VsMetrics is an Addin for [Cake](http://cakebuild.net/) which can calculate code metrics using Visual Studio's `metrics.exe` tool.
-
-## Usage
+# Usage
 
 Download and install the [Metrics Powertool](https://www.microsoft.com/en-us/download/details.aspx?id=48213) (this link is for Visual Studio 2015).
 
@@ -37,16 +33,3 @@ var settings = new VsMetricsSettings()
 
 VsMetrics(projects, "metrics_result.xml", settings);
 ```
-
-The settings object can also be used to specify the `metrics.exe` version:
-
-```csharp
-var settings = new VsMetricsSettings()
-{
-    ToolVersion = VsMetricsToolVersion.VS2015
-};
-```
-
-## License
-
-[MIT](http://opensource.org/licenses/MIT)

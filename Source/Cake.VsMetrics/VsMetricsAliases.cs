@@ -9,13 +9,8 @@ namespace Cake.VsMetrics
     /// <summary>
     /// <para>Contains functionality related to Visual studio's metrics.exe command line tool.</para>
     /// <para>
-    /// In order to use the commands for this addin, you will need to register metrics.exe in your cake build file after you have installed the metrics power tool:
-    /// <code>
-    /// Setup(context => {
-    ///     context.Tools.RegisterFile("C:/Program Files (x86)/Microsoft Visual Studio 14.0/Team Tools/Static Analysis Tools/FxCop/metrics.exe");
-    /// });
-    /// </code>
-    /// In addition, you will need to include the following:
+    /// In order to use the commands for this addin, you will need to install the metrics power tool (which is currently not included in a Visual Studio installation).
+    /// Afterwards include the Addin in your cake build script and you are ready to go:
     /// <code>
     /// #addin Cake.VsMetrics
     /// </code>
