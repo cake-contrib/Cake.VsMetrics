@@ -50,16 +50,16 @@ var searchModule = function() {
 
     a({
         id:2,
-        title:"VsMetricsToolVersion",
-        content:"VsMetricsToolVersion",
+        title:"VsMetricsSettings",
+        content:"VsMetricsSettings",
         description:'',
         tags:''
     });
 
     a({
         id:3,
-        title:"VsMetricsSettings",
-        content:"VsMetricsSettings",
+        title:"VsMetricsToolVersion",
+        content:"VsMetricsToolVersion",
         description:'',
         tags:''
     });
@@ -77,14 +77,14 @@ var searchModule = function() {
     });
 
     y({
-        url:'/Cake.VsMetrics/Cake.VsMetrics/api/Cake.VsMetrics/VsMetricsToolVersion',
-        title:"VsMetricsToolVersion",
+        url:'/Cake.VsMetrics/Cake.VsMetrics/api/Cake.VsMetrics/VsMetricsSettings',
+        title:"VsMetricsSettings",
         description:""
     });
 
     y({
-        url:'/Cake.VsMetrics/Cake.VsMetrics/api/Cake.VsMetrics/VsMetricsSettings',
-        title:"VsMetricsSettings",
+        url:'/Cake.VsMetrics/Cake.VsMetrics/api/Cake.VsMetrics/VsMetricsToolVersion',
+        title:"VsMetricsToolVersion",
         description:""
     });
 
