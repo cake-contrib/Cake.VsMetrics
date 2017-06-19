@@ -9,8 +9,8 @@
     <licenseUrl>https://github.com/cake-contrib/Cake.VsMetrics/blob/master/LICENSE</licenseUrl>
     <projectUrl>https://github.com/cake-contrib/Cake.VsMetrics</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Cake Metrics AddIn</description>
-    <summary>Cake AddIn for Visual Studio's standalone metrics.exe command line tool</summary>
+    <summary>Cake Metrics AddIn</summary>
+    <description>Cake AddIn for Visual Studio's standalone metrics.exe command line tool</description>
     <copyright>Copyright (c) Cake Contributions 2017 - Present</copyright>
     <tags>Cake, Script, Build, Metrics</tags>
   </metadata>
