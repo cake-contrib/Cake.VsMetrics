@@ -6,6 +6,7 @@
     <title>Cake.VsMetrics</title>
     <authors>fwinkelbauer</authors>
     <owners>fwinkelbauer, cake-contrib</owners>
+    <iconUrl>https://raw.githubusercontent.com/cake-contrib/graphics/master/png/cake-contrib-small.png</iconUrl>
     <licenseUrl>https://github.com/cake-contrib/Cake.VsMetrics/blob/master/LICENSE</licenseUrl>
     <projectUrl>https://github.com/cake-contrib/Cake.VsMetrics</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
