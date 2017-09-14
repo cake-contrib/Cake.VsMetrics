@@ -196,5 +196,6 @@ FakesAssemblies/
 *.opt
 
 # Build Related
-tools/
-BuildArtifacts/
+**/BuildArtifacts/
+**/tools/*
+!**/tools/packages.config
