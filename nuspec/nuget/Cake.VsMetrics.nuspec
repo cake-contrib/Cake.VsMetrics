@@ -1,12 +1,12 @@
-<?xml version="1.0"?>
-<package >
+<?xml version="1.0" encoding="utf-8"?>
+<package>
   <metadata>
     <id>Cake.VsMetrics</id>
     <version>0.0.0</version>
     <title>Cake.VsMetrics</title>
     <authors>fwinkelbauer</authors>
     <owners>fwinkelbauer, cake-contrib</owners>
-    <iconUrl>https://raw.githubusercontent.com/cake-contrib/graphics/master/png/cake-contrib-small.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/cake-contrib/graphics/png/cake-contrib-medium.png</iconUrl>
     <licenseUrl>https://github.com/cake-contrib/Cake.VsMetrics/blob/master/LICENSE</licenseUrl>
     <projectUrl>https://github.com/cake-contrib/Cake.VsMetrics</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
