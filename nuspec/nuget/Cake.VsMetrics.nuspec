@@ -17,8 +17,8 @@
     <tags>Cake, Script, Build, Metrics</tags>
   </metadata>
   <files>
-    <file src="Cake.VsMetrics.dll" target="lib\net45" />
-    <file src="Cake.VsMetrics.pdb" target="lib\net45" />
-    <file src="Cake.VsMetrics.xml" target="lib\net45" />
+    <file src="Cake.VsMetrics.dll" target="lib\net461" />
+    <file src="Cake.VsMetrics.pdb" target="lib\net461" />
+    <file src="Cake.VsMetrics.xml" target="lib\net461" />
 </files>
 </package>
